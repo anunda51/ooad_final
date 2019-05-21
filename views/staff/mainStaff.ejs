@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- font and icon-->
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>หน้าหลัก</title>
+</head>
+
+<body class="contentBody">
+
+    <div style="display: none" id="mySidebar">
+        <ul class="sidenav borderSidenav " style="background-image: url(/12.png)">
+            <li class="borderSidenav">
+                <a href="/reg/mainStaff">
+                    <p style="color: #ffffff ; margin-top: 10%; font-size: 20px; text-align: center">REG BUU</p>
+                </a>
+            </li>
+            <hr>
+            <li><a href="/reg/login" class="borderSidenav" href="#home"><i class="fas fa-sign-out-alt icon"
+                        style="margin-right: 28px"></i>ออกจากระบบ</a></li>
+            <li>
+                <a href="/reg/managerUsers" class=" borderSidenav" href="#contact"> <i class="fas fa-user icon"
+                        style="margin-right: 28px"></i>จัดการผู้ใช้</a>
+            </li>
+            <li>
+                <a href="/reg/manageSubject" class=" borderSidenav"> <i class="fas fa-address-book icon"
+                        style="margin-right: 28px"></i>จัดการรายวิชา</a>
+            </li>
+            <li>
+                <a href="/reg/manageBuilding" class=" borderSidenav"> <i class="fas fa-building icon"
+                        style="margin-right: 28px"></i>จัดการตึก</a>
+            </li>
+            <li><a href="/reg/manageRoom" class=" borderSidenav"><i class="fas fa-school icon"></i>จัดการห้อง</a></li>
+            <li>
+                <a href="/reg/manageCourse" class=" borderSidenav"> <i class="fas fa-file-alt icon"
+                        style="margin-right: 28px"></i>จัดการคอร์สเรียน</a>
+            </li>
+            <li>
+                <a href="/reg/manageExamMain" class=" borderSidenav"> <i class="fas fa-book icon"
+                        style="margin-right: 28px"></i>สร้างการสอบ</a>
+            </li>
+            <li><a href="/reg/manageYear" class=" borderSidenav" href="#contact"><i
+                        class="fas fa-chalkboard icon"></i>ปีการศึกษา</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w3-sidebar w3-bar-block w3-black w3-xlarge " style="display: none ; z-index: 2;" id="sidebarMe">
+        <a href="/reg/login" class="w3-bar-item w3-button "><i class="fas fa-sign-out-alt"></i></a>
+        <a href="/reg/managerUsers" class="w3-bar-item  w3-button"><i class="fas fa-user"></i></a>
+        <a href="/reg/manageSubject" class="w3-bar-item  w3-button"><i class="fas fa-address-book"></i></a>
+        <a href="/reg/manageBuilding" class="w3-bar-item  w3-button"><i class="fas fa-building"></i></a>
+        <a href="/reg/manageRoom" class="w3-bar-item  w3-button"><i class="fas fa-school"></i></a>
+        <a href="/reg/manageCourse" class="w3-bar-item  w3-button"><i class="fas fa-file-alt "></i></a>
+        <a href="/reg/manageExamMain" class="w3-bar-item  w3-button"><i class="fas fa-book"></i></a>
+        <a href="/reg/manageYear" class="w3-bar-item  w3-button"><i class="fas fa-chalkboard"></i></a>
+    </div>
+
+    <div id="main">
+        <div class="navbar " id="navbar">
+            <button class="btnNavbar btn w3-xlarge" id="openNav" style="display:none;"
+                onclick="w3_open()">&#9776;</button>
+            <button id="closeNav" style="display:none; " class=" btn w3-xlarge" onclick="w3_close()">
+                &times;</button>
+            <div class="year1">
+                <span>ปีการศึกษา :
+                    <% if(err){ %>
+                    <label>- / -</label>
+                    <% }else{ %>
+                    <label><%=year.year%> / <%=year.semester%></label>
+                    <% } %>
+                </span>
+            </div>
+        </div>
+
+        <div class="contentRespon content">
+            <div class="cardMain">
+                <div class="containerMain">
+                    <div>
+                        <p>ยินดีต้อนรับ...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="/js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#sampleTable').DataTable();
+        $('#sampleTable').DataTable();
+    </script>
+
+
+</body>
+
+</html>

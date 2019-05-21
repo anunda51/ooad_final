@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- font and icon-->
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .modal-content {
+            background-color: #f1f1f1;
+            margin: 15% auto 35% 35%;
+            border: 1px solid #888;
+            width: 30%;
+            height: 40%;
+            padding: 2%;
+        }
+        
+        @media screen and (max-width: 720px) {
+            .modal-content {
+                width: 45%;
+                height: 42%;
+                background-color: #f1f1f1;
+                margin: 35% auto 35% 32%;
+            }
+        }
+    </style>
+    <title>จัดการรายวิชา</title>
+</head>
+
+<body class="contentBody">
+
+    <div style="display: none" id="mySidebar">
+        <ul class="sidenav borderSidenav " style="background-image: url(../assets/12.png)">
+            <li class="borderSidenav">
+                <p style="color: #ffffff ; margin-top: 10%; font-size: 20px; text-align: center">REG BUU</p>
+            </li>
+            <hr>
+            <li><a href="../login.html" class="borderSidenav" href="#home"><i class="fas fa-sign-out-alt icon"
+                                style="margin-right: 28px"></i>ออกจากระบบ</a></li>
+            <li>
+                <a href="managerUsers.html" class=" borderSidenav" href="#contact"> <i class="fas fa-user icon" style="margin-right: 28px"></i>จัดการผู้ใช้</a>
+            </li>
+            <li>
+                <a href="managerSubject.html" class="active borderSidenav"> <i class="fas fa-address-book icon" style="margin-right: 28px"></i>จัดการรายวิชา</a>
+            </li>
+            <li><a href="managerRoom.html" class=" borderSidenav"><i class="fas fa-school icon"></i>จัดการห้อง</a></li>
+            <li>
+                <a href="managerCourse.html" class=" borderSidenav"> <i class="fas fa-file-alt icon" style="margin-right: 28px"></i>จัดการคอร์สเรียน</a>
+            </li>
+            <li>
+                <a href="managerExam.html" class=" borderSidenav"> <i class="fas fa-book icon" style="margin-right: 28px"></i>สร้างการสอบ</a>
+            </li>
+            <li><a href="manageYear.html" class=" borderSidenav" href="#contact"><i class="fas fa-chalkboard icon"></i>ปีการศึกษา</a></li>
+
+        </ul>
+    </div>
+
+    <div class="w3-sidebar w3-bar-block w3-black w3-xlarge " style="display: none ; z-index: 2;" id="sidebarMe">
+        <a href="../login.html" class="w3-bar-item w3-button "><i class="fas fa-sign-out-alt"></i></a>
+        <a href="managerUsers.html" class="w3-bar-item  w3-button"><i class="fas fa-user"></i></a>
+        <a href="managerSubject.html" class="w3-bar-item  w3-teal"><i class="fas fa-address-book"></i></a>
+        <a href="managerRoom.html" class="w3-bar-item  w3-button"><i class="fas fa-school"></i></a>
+        <a href="managerCourse.html" class="w3-bar-item  w3-button"><i class="fas fa-file-alt"></i></a>
+        <a href="managerExam.html" class="w3-bar-item  w3-button"><i class="fas fa-book"></i></a>
+
+        <a href="manageYear.html" class="w3-bar-item  w3-button"><i class="fas fa-chalkboard"></i></a>
+    </div>
+
+    <div id="main">
+        <div class="navbar " id="navbar">
+            <button class="btnNavbar btn w3-xlarge" id="openNav" style="display:none;" onclick="w3_open()">&#9776;</button>
+            <button id="closeNav" style="display:none" class=" btn w3-xlarge" onclick="w3_close()">
+                &times;</button>
+            <div class="year1">
+                <span>ปีการศึกษา : xxxx</span>
+                <span>/ x</span>
+            </div>
+        </div>
+
+        <div class="contentRespon content">
+            <div class="cardMain">
+                <div class="containerMain">
+                    <div class="titleCard" style="padding-left: 30px">
+                        <span style="margin-bottom: 10% ;font-size: 25px">
+                                    จัดการรายวิชา</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="btnUpLeft">
+                            <a href="addSubject.html"><button type="button" class="btn btn-outline-primary"
+                                                style="width:100%;  padding: 10px ;margin-top: 2%">เพิ่มวิชา</button></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tile">
+                                <div class="tile-body">
+                                    <div style="overflow-x:auto;">
+                                        <table class="table table-hover table-bordered" id="sampleTable">
+                                            <thead>
+                                                <tr style="text-align: center; background-color: rgba(95, 201, 187, 0.473);">
+                                                    <th>รหัสวิชา</th>
+                                                    <th>ชื่อวิชา</th>
+                                                    <th>หน่วยกิต</th>
+                                                    <th>แก้ไขข้อมูล</th>
+                                                    <th>ลบข้อมูล</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Cellffffffffffffff</td>
+                                                    <td>Cellsss</td>
+                                                    <td class="tdCenter"><a href="editSubject.html" class="btn btn-info btnSize">แก้ไข</a></td>
+                                                    <td class="tdCenter"><a href="#" class="btn btn-danger btnSize" onclick="del()">ลบ</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Cellsssssssss</td>
+                                                    <td>Cell</td>
+                                                    <td class="tdCenter"><a href="editSubject.html" class="btn btn-info btnSize">แก้ไข</a></td>
+                                                    <td class="tdCenter"><a href="#" class="btn btn-danger btnSize" onclick="del()">ลบ</a></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Cellssssssssssss</td>
+                                                    <td>Cell</td>
+                                                    <td class="tdCenter"><a href="editSubject.html" class="btn btn-info btnSize">แก้ไข</a></td>
+                                                    <td class="tdCenter"><a href="#" class="btn btn-danger btnSize" onclick="del()">ลบ</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Cellfffffffffffff</td>
+                                                    <td>Cell</td>
+                                                    <td class="tdCenter"><a href="editSubject.html" class="btn btn-info btnSize">แก้ไข</a></td>
+                                                    <td class="tdCenter"><a href="#" class="btn btn-danger btnSize" onclick="del()">ลบ</a></td>
+                                                </tr>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="id02" class="modalPop">
+                                <form class="modal-content animate" action="managerSubject.html">
+                                    <div onclick="document.getElementById('id02').style.display='none'" class="closePop" title="Close Modal">×</div>
+                                    <br>
+                                    <div class="container2Pop">
+                                        <div class="row">
+                                            <div class="col-md-12 " style="margin-bottom: 5%;margin-left: 14%;">
+                                                ยืนยันที่จะลบใช่หรือไม่
+                                            </div>
+                                        </div>
+                                        <div class="row " style="margin-top:4%;">
+                                            <div class="col-md-6 " style="margin-bottom: 4%;">
+                                                <button type="submit" class="btn btn-success" style=" padding: 10px 32px 10px 32px  ;margin-top: 5px">ตกลง</button></div>
+                                            <div class="col-md-6 " style="margin-bottom: 4%;">
+                                                <button type="button" class="btn btn-danger" style=" padding: 10px 32px 10px 32px  ;margin-top: 5px;">ยกเลิก</button></div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="../assets/js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#sampleTable').DataTable();
+        $('#sampleTable').DataTable();
+    </script>
+
+
+</body>
+
+</html>

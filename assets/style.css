@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+.contentBody {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: rgba(223, 219, 219, 0.445);
+}
+
+
+/* --------------------------------- login ---------------------------------*/
+
+div.login {
+    background-color: rgba(0, 0, 0, 0.822);
+    margin-top: 8%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 1%;
+    color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 8px 9px 0 rgba(0, 0, 0, 0.5);
+}
+
+button.btnLogin {
+    margin-left: 2%;
+    margin-bottom: 30px;
+    margin-top: 10%;
+    height: 50px;
+    width: 80%;
+    background-color: rgb(47, 162, 170);
+    border-radius: 10px;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+button.btnLogin:hover {
+    background-color: rgb(59, 105, 190);
+    color: rgb(243, 242, 242);
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 00);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+div.formLogin {
+    margin-left: 15%;
+    margin-top: 30px;
+    padding-right: 10px;
+}
+
+
+/* --------------------------------- end login ---------------------------------*/
+
+
+/* --------------------------------- navbar --------------------------------- */
+
+div.navbar {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(226, 226, 226, 0.705);
+    position: fixed;
+    top: 0;
+    height: 9%;
+    margin-left: 15%;
+    width: 100%;
+    z-index: 1;
+}
+
+div.year1 {
+    margin-left: 70%;
+}
+
+
+/* --------------------------------- end - navbar --------------------------------- */
+
+
+/* --------------------------------- sidebar ---------------------------------*/
+
+ul.borderSidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    text-align: left;
+    z-index: 2;
+}
+
+li a.borderSidenav {
+    display: block;
+    color: rgb(236, 235, 235);
+    padding: 18px 14px;
+    text-decoration: none;
+    margin: 3%;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+li a.active {
+    text-decoration: none;
+    background-color: rgba(45, 236, 227, 0.301);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    text-decoration: none;
+    background-color: rgba(46, 45, 45, 0.541);
+    color: rgb(243, 242, 242);
+}
+
+i.icon {
+    margin-left: 12px;
+    margin-right: 22px;
+    font-size: 20px;
+}
+
+
+/*---------------------------------  slider bar --------------------------------- */
+
+
+/* --------------------------------- card --------------------------------- */
+
+.cardMain {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    margin-bottom: 5%;
+}
+
+.containerMain {
+    padding: 4% 7%;
+}
+
+
+/* --------------------------------- end card --------------------------------- */
+
+
+/* ----------------------------------- btn card ------------------------------ */
+
+.btnYear {
+    margin-left: 120%;
+}
+
+div.btnUpLeft {
+    margin-left: 85%;
+    margin-bottom: 4%;
+}
+
+div.btnUpLeft2 {
+    margin-left: 80%;
+    margin-bottom: 4%;
+}
+
+div.btn2Pop {
+    margin-top: 4%;
+}
+
+
+/* ----------------------------------- end btn card ------------------------------ */
+
+
+/* ------------------------------------------ */
+
+.year {
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+input {
+    text-align: center;
+}
+
+
+/* --------------------------------------------- */
+
+
+/* ------------------------------- table -------------------------- */
+
+td.tdCenter,
+th.tdCenter {
+    text-align: center;
+}
+
+a.btnSize {
+    padding: 9px 25px 9px 25px;
+}
+
+
+/* ------------------------------- end table -------------------------- */
+
+
+/* ------------------------------- row Button  ------------------------------ */
+
+div.row2Btn {
+    margin-top: 7%;
+    margin-left: 65%;
+}
+
+div.rowBtnPop {
+    margin-top: 7%;
+    margin-left: 25%;
+}
+
+
+/* ------------------------------- end row Button  ------------------------------ */
+
+
+/* ------------------------------ Modal ------------------------------- */
+
+.containerPop {
+    margin: 15% auto auto 12%;
+    padding: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+
+.container2Pop {
+    margin: 12% 15% 5% 12%;
+    padding: 16px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+
+.modalPop {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.closePop {
+    position: absolute;
+    margin-left: 80%;
+    color: rgb(158, 146, 146);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.closePop:hover,
+.closePop:focus {
+    color: red;
+    cursor: pointer;
+}
+
+div.popAddRoom {
+    margin-bottom: 2%;
+     margin-left: 30%;
+}
+/* ------------------------------end Modal ------------------------------- */

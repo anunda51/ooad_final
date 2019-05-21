@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- font and icon-->
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>เพิ่มห้องสอบ</title>
+</head>
+
+<body class="contentBody">
+
+    <div style="display: none" id="mySidebar">
+        <ul class="sidenav borderSidenav " style="background-image: url(../assets/12.png)">
+            <li class="borderSidenav">
+                <p style="color: #ffffff ; margin-top: 10%; font-size: 20px; text-align: center">REG BUU</p>
+            </li>
+            <hr>
+            <li><a href="../login.html" class="borderSidenav" href="#home"><i class="fas fa-sign-out-alt icon"
+                                    style="margin-right: 28px"></i>ออกจากระบบ</a></li>
+            <li>
+                <a href="examRoom.html" class=" borderSidenav" href="#contact"> <i class="fas fa-step-backward icon" style="margin-right: 28px"></i>ถอยกลับ</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w3-sidebar w3-bar-block w3-black w3-xlarge " style="display: none; z-index: 2;" id="sidebarMe">
+        <a href="../login.html" class="w3-bar-item w3-button "><i class="fas fa-sign-out-alt"></i></a>
+
+        <a href="examRoom.html" class="w3-bar-item  w3-button"><i class="fas fa-step-backward"></i></a>
+
+    </div>
+
+
+    <div id="main">
+        <div class="navbar " id="navbar">
+            <button class="btnNavbar btn w3-xlarge" id="openNav" style="display:none;" onclick="w3_open()">&#9776;</button>
+            <button id="closeNav" style="display:none; " class=" btn w3-xlarge" onclick="w3_close()">
+                &times;</button>
+            <div class="year1">
+                <span>ปีการศึกษา : xxxx</span>
+                <span>/ x</span>
+            </div>
+        </div>
+
+        <div class="contentRespon content">
+            <div class="cardMain">
+                <div class="containerMain">
+                    <div class="titleCard" style="padding-left: 30px">
+                        <span style="margin-bottom: 10% ;font-size: 25px;">
+                                            เพิ่มห้องสอบ</span>
+                    </div>
+
+                    <div class="row" style="margin-top:5%;">
+                        <div class="col-md-12">
+                            <div class="tile">
+                                <div class="tile-body">
+                                    <div style="overflow-x:auto;">
+                                        <table class="table table-hover table-bordered" id="sampleTable">
+                                            <thead>
+                                                <tr style="text-align: center; background-color: rgba(95, 201, 187, 0.473);">
+                                                    <th></th>
+                                                    <th>ชื่อห้อง</th>
+                                                    <th>จำนวนที่นั่ง</th>
+                                                    <th>กลุ่ม</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="tdCenter" scope="row">
+                                                        <form>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" value="">
+                                                            </div>
+
+                                                        </form>
+                                                    </th>
+                                                    <td>111111</td>
+                                                    <td>111111</td>
+                                                    <td class="tdCenter">ว่าง</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="tdCenter" scope="row">
+                                                        <form>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" value="">
+                                                            </div>
+
+                                                        </form>
+                                                    </th>
+                                                    <td>111111</td>
+                                                    <td>111111</td>
+                                                    <td class="tdCenter">ว่าง</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:2%;margin-left: 20%;">
+
+                        <div class="col-md-8">
+                            <button class="btn btn-success btnYear" style="padding-left: 32px; padding-right: 32px;">ยืนยัน</button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="../assets/js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#sampleTable').DataTable();
+        $('#sampleTable').DataTable();
+    </script>
+
+
+</body>
+
+</html>

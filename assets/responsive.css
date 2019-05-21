@@ -1,0 +1,282 @@
+div.contentLogin {
+    height: 674px;
+}
+
+div.content {
+    margin-left: 20%;
+    padding: 1px 16px;
+    height: 700px;
+    margin-right: 2%;
+    margin-top: 0%;
+    transition: 0.2s;
+}
+
+div.cardMain {
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 1140px) {
+    div.cardMain {
+        margin-top: 10%;
+        margin-left: 1%;
+    }
+    div.login {
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 2%;
+        padding-right: 12%;
+    }
+    button.btnLogin {
+        margin-top: 17%;
+        width: 100%;
+    }
+    div.year {
+        margin-left: 25%;
+    }
+    div.year1 {
+        margin-left: 67%;
+    }
+    div.row2Btn {
+        margin-left: 45%;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    div.cardMain {
+        margin-top: 15%;
+        margin-left: 1%;
+    }
+    div.login {
+        margin-top: 7%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 2%;
+        padding-right: 12%;
+    }
+    button.btnLogin {
+        margin-top: 17%;
+        width: 100%;
+    }
+    button.btnYear {
+        margin-left: 37%;
+    }
+    div.year {
+        margin-left: 25%;
+    }
+    div.year1 {
+        margin-left: 64%;
+    }
+}
+
+@media screen and (max-width: 879px) {
+    div.navbar {
+        margin-left: 0;
+    }
+    ul.sidenav {
+        display: none;
+        width: 0%;
+    }
+    div.contentRespon {
+        margin-left: 0%;
+    }
+    button.btnNavbar {
+        display: block;
+    }
+    button.btnYear {
+        margin-left: 37%;
+    }
+    div.year {
+        margin-left: 25%;
+        margin-right: 9%;
+    }
+    div.row2Btn {
+        margin-left: 15%;
+    }
+    div.rowBtnPop {
+        margin-top: 7%;
+        margin-left: 15%;
+    }
+    div.container2Pop {
+        margin: 12% 15% 5% 12%;
+        padding: 6px;
+    }
+    div.btn2Pop {
+        margin-left: 14%;
+    }
+    div.popAddRoom {
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    div.cardMain {
+        margin-top: 17%;
+        margin-left: 2%;
+    }
+    div.login {
+        margin-top: 2%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 2%;
+        padding-right: 12%;
+    }
+    button.btnLogin {
+        margin-top: 17%;
+        width: 100%;
+    }
+    button.btnYear {
+        margin-left: 35%;
+    }
+    div.year {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .titleCard {
+        margin-top: 7%;
+    }
+    div.year1 {
+        margin-left: 10%;
+    }
+    div.row2Btn {
+        margin-left: 14%;
+        margin-bottom: 3%;
+    }
+    div.btnUpLeft {
+        margin-left: 77%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    div.btnUpLeft2 {
+        margin-left: 67%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    .containerPop {
+        margin: 15% auto auto 2%;
+    }
+    .container2Pop {
+        margin: 12% 15% 5% 12%;
+    }
+    div.rowBtnPop {
+        margin-top: 7%;
+        margin-left: 27%;
+    }
+    div.btn2Pop {
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    div.cardMain {
+        margin-top: 20%;
+        margin-left: 2%;
+    }
+    div.login {
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 2%;
+        padding-right: 12%;
+    }
+    button.btnLogin {
+        margin-top: 17%;
+        width: 100%;
+    }
+    button.btnYear {
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+    div.year {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .titleCard {
+        margin-top: 10%;
+    }
+    div.rowBtnPop {
+        margin-top: 7%;
+        margin-left: 15%;
+    }
+    div.popAddRoom {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .contentBody {
+        font-size: 16px;
+        margin: 0;
+        font-family: 'Kanit', sans-serif;
+        background-color: rgba(241, 244, 247, 0.445);
+    }
+    div.cardMain {
+        margin-top: 20%;
+        margin-left: 2%;
+        box-shadow: 0 0px 0px 0 rgba(241, 244, 247, 0.445);
+        width: 100%;
+        border-radius: 15px;
+        background-color: rgba(253, 252, 252, 0.445);
+        margin-bottom: 5%;
+    }
+    .containerMain {
+        padding: 4% 7%;
+    }
+    div.navbar {
+        background: rgb(43, 167, 172);
+        background: -webkit-linear-gradient(left top, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: -o-linear-gradient(bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: -moz-linear-gradient(bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: linear-gradient(to bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+    }
+    button.btnYear {
+        margin-top: 5%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+    }
+    div.row2Btn {
+        margin-left: 2%;
+    }
+    div.rowBtnPop {
+        margin-top: 7%;
+        margin-left: 5%;
+    }
+    div.login {
+        background: rgb(43, 167, 172);
+        background: -webkit-linear-gradient(left top, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: -o-linear-gradient(bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: -moz-linear-gradient(bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        background: linear-gradient(to bottom right, rgb(90, 105, 238), rgba(87, 216, 156, 0.712));
+        border-radius: 0;
+        color: rgb(1, 3, 5);
+        margin: 0;
+        overflow: auto;
+        height: 100%;
+        padding-top: 10%;
+    }
+    button.btnLogin {
+        background-color: rgb(14, 87, 109);
+    }
+    .fadeInDown {
+        -webkit-animation-duration: 0s;
+        animation-duration: 0s;
+    }
+    div.formLogin {
+        margin-top: 10%;
+        margin-left: 18%;
+        margin-right: 6%;
+    }
+}
+
+@media screen and (max-height: 850px) and ( max-width: 420px) {
+    div.login {
+        height: 120%;
+    }
+}
+
+@media screen and (max-height: 690px) and ( max-width: 420px) {
+    div.login {
+        height: 100%;
+    }
+}

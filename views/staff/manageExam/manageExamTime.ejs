@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- font and icon-->
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .modal-content {
+            background-color: #f1f1f1;
+            margin: 15% auto 35% 35%;
+            border: 1px solid #888;
+            width: 30%;
+            height: 40%;
+            padding: 2%;
+        }
+
+        @media screen and (max-width: 720px) {
+            .modal-content {
+                width: 45%;
+                height: 42%;
+                background-color: #f1f1f1;
+                margin: 35% auto 35% 32%;
+            }
+        }
+    </style>
+    <title>จัดการวันสอบ</title>
+</head>
+
+<body class="contentBody">
+
+    <div style="display: none" id="mySidebar">
+        <ul class="sidenav borderSidenav " style="background-image: url(/12.png)">
+            <li class="borderSidenav">
+                <a href="/reg/mainStaff">
+                    <p style="color: #ffffff ; margin-top: 10%; font-size: 20px; text-align: center">REG BUU</p>
+                </a>
+            </li>
+            <hr>
+            <li><a href="/reg/login" class="borderSidenav" href="#home"><i class="fas fa-sign-out-alt icon"
+                        style="margin-right: 28px"></i>ออกจากระบบ</a></li>
+
+            <li>
+                <a href="/reg/manageExamMain" class=" borderSidenav" href="#contact"> <i
+                        class="fas fa-step-backward icon" style="margin-right: 28px"></i>ถอยกลับ</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="w3-sidebar w3-bar-block w3-black w3-xlarge " style="display: none ; z-index: 2;" id="sidebarMe">
+        <a href="/reg/login" class="w3-bar-item w3-button "><i class="fas fa-sign-out-alt"></i></a>
+
+        <a href="/reg/manageExamMain" class="w3-bar-item  w3-button"><i class="fas fa-step-backward"></i></a>
+    </div>
+
+    <div id="main">
+        <div class="navbar " id="navbar">
+            <button class="btnNavbar btn w3-xlarge" id="openNav" style="display:none;"
+                onclick="w3_open()">&#9776;</button>
+            <button id="closeNav" style="display:none; " class=" btn w3-xlarge" onclick="w3_close()">
+                &times;</button>
+            <div class="year1">
+                <span>ปีการศึกษา :
+                    <% if(err){ %>
+                    <label>- / -</label>
+                    <% }else{ %>
+                    <label><%=year.year%> / <%=year.semester%></label>
+                    <% } %>
+                </span>
+            </div>
+        </div>
+
+        <div class="contentRespon content">
+            <div class="cardMain">
+                <div class="containerMain">
+                    <div class="titleCard" style="padding-left: 30px">
+                        <span style="margin-bottom: 10% ;font-size: 25px;">
+                            จัดการวันสอบ</span>
+                    </div>
+                    <div class="row">
+                        <div class="btnUpLeft2">
+                            <a href="/reg/examAddTime/<%=exam._id%>"><button class="btn btn-outline-primary"
+                                    style="width:100%;  padding: 10px ;margin-top: 2%">เพิ่มวันสอบ</button></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tile">
+                                <div class="tile-body">
+
+                                    <div class="row" style="margin-bottom:4%;margin-left: 1%; font-size: 19px;">
+                                        <div class="col">
+                                            รหัสวิชา : <%=exam.idSubject%>
+
+                                        </div>
+                                        <div class="col">
+                                            ชื่อวิชา : <%=exam.nameSubject%>
+                                        </div>
+                                    </div>
+                                    <div style="overflow-x:auto;">
+                                        <table class="table table-hover table-bordered" id="sampleTable">
+                                            <thead>
+                                                <tr
+                                                    style="text-align: center; background-color: rgba(95, 201, 187, 0.473);">
+                                                    <th>วัน</th>
+                                                    <th>เวลาเริ่ม - สิ้นสุด</th>
+                                                    <th>ห้อง</th>
+                                                    <th>ยกเลิกการสอบ</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tdCenter"><%= exam.date %></td>
+                                                    <td class="tdCenter"><%= exam.time %></td>
+                                                    <td class="tdCenter"><a href="/reg/examRoom/<%=exam._id%>"
+                                                            class="btn btn-info btnSize" role="button"
+                                                            aria-pressed="true">จัดการ</a></td>
+                                                    <td class="tdCenter"><a href="/reg/examCancelTime/<%=exam._id%>"
+                                                            class="btn btn-danger btnSize" role="button"
+                                                            aria-pressed="true">ยกเลิก</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="id02" class="modalPop">
+                                <form class="modal-content animate" action="managerExam.html">
+                                    <div onclick="document.getElementById('id02').style.display='none'" class="closePop"
+                                        title="Close Modal">×</div>
+                                    <br>
+                                    <div class="container2Pop">
+                                        <div class="row">
+                                            <div class="col-md-12 " style="margin-bottom: 5%;margin-left: 14%;">
+                                                ยืนยันที่จะลบใช่หรือไม่
+                                            </div>
+                                        </div>
+                                        <div class="row btn2Pop">
+                                            <div class="col-md-6 " style="margin-bottom: 4%;">
+                                                <button type="submit" class="btn btn-success"
+                                                    style=" padding: 10px 32px 10px 32px  ;margin-top: 5px">ตกลง</button>
+                                            </div>
+                                            <div class="col-md-6 " style="margin-bottom: 4%;">
+                                                <button type="button" class="btn btn-danger"
+                                                    style=" padding: 10px 32px 10px 32px  ;margin-top: 5px;">ยกเลิก</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="/js/plugins/pace.min.js"></script>
+    <script type="text/javascript" src="/js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#sampleTable').DataTable();
+        $('#sampleTable').DataTable();
+    </script>
+
+
+</body>
+
+</html>
